@@ -1,0 +1,10 @@
+{
+  "name": "auditor",
+  "version": "1.0.0",
+  "description": "RES 2019 - Lab Orchestra - Auditor",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Nohan Budry",
+}
