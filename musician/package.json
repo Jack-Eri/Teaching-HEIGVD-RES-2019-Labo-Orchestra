@@ -4,7 +4,13 @@
   "description": "RES 2019 - Lab Orchestra - Musician",
   "main": "index.js",
   "scripts": {
+    "start": "node index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "Nohan Budty",
+  "author": "Nohan Budry",
+  "dependencies": {
+    "dgram": "^1.0.1",
+    "moment": "^2.24.0",
+    "uuid": "^3.3.2"
+  }
 }
