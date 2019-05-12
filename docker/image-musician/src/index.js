@@ -35,13 +35,14 @@ const musician = {
     sound: sound
 }
 
-const message = Buffer.from(JSON.stringify(musician));
-
 const socket = dgram.createSocket("udp4");
-setInterval(() => socket.send(message, 0, message.length, PORT, MULTICAST_ADDRESS, (err) => {
-    if (err) {
-        console.log(err.message);
-    } else {
-        console.log("Sending " + message);
-    }
-}), 1000);
+setInterval(() => {
+    const payload = JSON.stringify(musician);
+    socket.send(payload, 0, payload.length, PORT, MULTICAST_ADDRESS, (err) => {
+        if (err) {
+            console.log(err.message);
+        } else {
+            console.log("Sending " + payload);
+        }
+    });
+}, 1000);
